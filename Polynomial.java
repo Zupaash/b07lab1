@@ -91,6 +91,10 @@ public class Polynomial
 	public boolean hasRoot(double h)
 	{
 		
+		double check_this = evaluate(h);
+		return Math.abs(check_this) <= 1e-9; // tolerance check
+		
+		/*
 		
 		double check_this = evaluate(h);
 		
@@ -102,6 +106,8 @@ public class Polynomial
 		{
 			return false;
 		}
+		
+		*/
 	
 		
 		// or ig you could do return evaluate(h) == 0.0; instead of the if else block above
